@@ -2,6 +2,8 @@
 
 Random dog image generator using the Dogs API without a page reload.
 
+https://github.com/user-attachments/assets/d5fe893a-3679-42b3-b02c-54d994b073b5
+
 ### Features
 
 - Show random dog image from `https://api.thedogapi.com` API
