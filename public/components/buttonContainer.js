@@ -12,9 +12,9 @@ const createButtonContainer = () => {
     createVoteEvent(upDownContainer);
     btnContainer.appendChild(upDownContainer);
 
-    const newDogBtn = document.createElement('btn');
+    const newDogBtn = document.createElement('button');
     newDogBtn.setAttribute('class', 'new-dogBtn');
-    newDogBtn.innerText = 'NEW DOG'
+    newDogBtn.innerText = 'SHOW NEW DOG'
 
     createNewDogEvent(newDogBtn);
     btnContainer.appendChild(newDogBtn);
@@ -28,13 +28,13 @@ const createVoteCounter = () => {
 
     if (localStorage.getItem('votes')) votes = localStorage.getItem('votes');
     voteCounterContainer.setAttribute('class', 'voteCounter-container');
-    voteCounterContainer.innerHTML = `<div class="votes-text"> Votes: </div> <div class="votes-num" id="votes"> ${votes} </div>`
+    voteCounterContainer.innerHTML = `<div class="votes-text"> Pawpularity Score: </div> <div class="votes-num" id="votes"> ${votes} </div>`
     return voteCounterContainer;
 }
 
 const createNewDogEvent = (dogBtn) => {
     dogBtn.addEventListener('click', evt => {
-        const dogImg = document.querySelector('.dog-img');
+        const dogImg = document.querySelector('.img');
         fetch('https://api.thedogapi.com/v1/images/search')
             .then(res => {
                 // console.log(res);
