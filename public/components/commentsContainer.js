@@ -30,10 +30,11 @@ const createInputBox = () => {
     const inputField = document.createElement('input');
     inputField.setAttribute('class', 'input-field');
     inputField.type = 'text';
+    inputField.placeholder = 'Type comment here';
 
     inputContainer.appendChild(inputField);
 
-    const postCommentBtn = document.createElement('btn');
+    const postCommentBtn = document.createElement('button');
     postCommentBtn.setAttribute('class', 'post-commentBtn');
     postCommentBtn.innerText = 'Post';
 
@@ -43,19 +44,26 @@ const createInputBox = () => {
     return inputContainer;
 }
 
+
+
 const createComment = (text) => {
     const commentContainer = document.createElement('div');
     commentContainer.setAttribute('class', 'comment-container');
+
+    const bulletOnComment = document.createElement('span');
+    bulletOnComment.setAttribute('class', 'bullet-point');
+    bulletOnComment.innerHTML = '&bull;';
 
     const newComment = document.createElement('div');
     newComment.setAttribute('class', 'comment');
     newComment.innerText = text;
 
-    const deleteCommentBtn = document.createElement('btn');
+    const deleteCommentBtn = document.createElement('button');
     deleteCommentBtn.setAttribute('class', 'delete-commentBtn');
     deleteCommentBtn.setAttribute('id', 'delete-btn');
     deleteCommentBtn.innerText = '❌'
 
+    commentContainer.appendChild(bulletOnComment);
     commentContainer.appendChild(newComment);
     commentContainer.appendChild(deleteCommentBtn);
 
