@@ -44,9 +44,9 @@ const server = http.createServer((req, res) => {
                   return;
             } catch {
                 console.error(
-                "Cannot find asset",
+                "File not found",
                 path.basename(req.url),
-                "in assets folder"
+                "in public folder"
                 );
             }
         }
