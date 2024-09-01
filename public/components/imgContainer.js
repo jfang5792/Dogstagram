@@ -20,7 +20,7 @@ const createHeader = () => {
 
 const createImg = () => {
     const dogImg = document.createElement('img');
-    dogImg.setAttribute('class', 'dog-img');
+    dogImg.setAttribute('class', 'img');
 
     if (localStorage.getItem('dogUrl')) {
         dogImg.src = localStorage.getItem('dogUrl');
